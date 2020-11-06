@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<div class="row">
+    <form action="/Usuario/Create" method="post">
+        <div>
+            <label>Nombre de Usuario</label>
+            <input class="form-control" type="text" name="NombreUsuario" value="@Model.NombreUsuario" />
+        </div>
+
+        <div>
+            <label>Contraseña de Usuario</label>
+            <input  class="form-control" type="password" name="Password" value="" />
+        </div>
+
+        <div>
+            <button class="btn btn-primary my-3" >Registrarse</button>
+        </div>
+    </form>
+
+</div>

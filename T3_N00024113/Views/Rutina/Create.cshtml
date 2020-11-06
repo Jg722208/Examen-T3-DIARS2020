@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<div class=" row">
+    <form action="/Rutina/Create" method="post">
+        <div class="col-md-6">
+            <label>Nombre de Rutina</label>
+            <input class="form-control" type="text" name="NombreRutina" value="" />
+        </div>
+        <div class="col-md-6">
+            <label>Tipo de Rutina</label>
+            <select class="custom-select" name="Tipo">
+                <option value="">--Escoga una opcion--</option>
+                <option value="Principiante">Principiante</option>
+                <option value="Intermedio">Intermedio</option>
+                <option value="Avanzado">Avanzado</option>
+            </select>
+        </div>
+        <div>
+            <button class="btn btn-primary">Crear</button>
+            <a href="/Usuario/Index" class="btn btn-light">Cancelar</a>
+        </div>
+    </form>
+</div>

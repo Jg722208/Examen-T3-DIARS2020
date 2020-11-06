@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@Model.NombreRutina</h1>
+<div>
+    @foreach (var item in ViewBag.Detalles)
+    {
+    <div class="card my-3">
+        @foreach (var ejercicio in ViewBag.Ejercicios)
+        {
+            @if (item.IdEjercicio == ejercicio.IdEjercicio)
+            {
+                <h3 class="card-title">@ejercicio.NombreEjercicio</h3>
+                <hr />
+                <div class="card-body">
+                    <div>
+                        <label>Video en Youtube</label>
+                        <a href="@ejercicio.LinkYoutube">@ejercicio.LinkYoutube</a>
+                    </div>
+                    <div>
+                        <label>Tiempo a realizar</label>
+                        <p>@item.Tiempo</p>
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+    }
+</div>
+

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<div class=" row my-3">
+    <a href="/Rutina/Create" class="btn btn-success">Nueva Rutina</a>
+</div>
+
+<div class="row">
+    <table class="table table-bordered">
+        <tr>
+            <td>Id </td>
+            <td>Nombre </td>
+            <td>Opciones </td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdRutina </td>
+                <td>@item.NombreRutina </td>
+                <td><a href="/Rutina/Index?rutinaId=@item.IdRutina">ver</a> </td>
+            </tr>
+        }
+    </table>
+</div>
